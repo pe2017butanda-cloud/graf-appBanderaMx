@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #000000;
+    margin-bottom: 40px;
+    font-weight: normal;
+}
+
+.contenedor-bandera {
+    display: grid;
+    /* 3 columnas de igual tamaño */
+    grid-template-columns: repeat(3, 1fr); 
+    /* 4 filas: etiqueta, slider, texto hex, recuadro */
+    grid-template-rows: auto auto auto 350px; 
+    gap: 15px 40px; 
+    width: 100%;
+    max-width: 1200px;
+}
+
+.columna {
+    display: contents; 
+}
+
+/* Fila 1: Etiquetas de texto */
+.etiqueta {
+    font-size: 1.1rem;
+    color: #333333;
+    text-align: center;
+    height: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 1; 
+}
+
+/* Fila 2: Sliders */
+input[type="range"] {
+    width: 100%;
+    margin: 0;
+    -webkit-appearance: none;
+    background: transparent;
+    grid-row: 2; 
+}
+
+/* Fila 3: Texto Hexadecimal */
+.valor-hex {
+    font-size: 1.1rem;
+    color: #333333;
+    margin: 0;
+    font-family: monospace;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 3; 
+}
+
+/* Fila 4: Cuadros de color */
+.cuadro-color {
+    width: 100%;
+    height: 100%; 
+    border: none;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    grid-row: 4; 
+}
+
+/* ===== ASIGNACIÓN DE COLUMNAS ESPECÍFICAS ===== */
+
+/* Columna 1 (Izquierda) - Verde */
+#slider-verde {
+    grid-column: 1;
+}
+#valor-verde {
+    grid-column: 1;
+}
+#cuadro-verde {
+    background-color: #008000;
+    grid-column: 1; 
+}
+
+/* Columna 2 (Centro) - Blanco */
+.blanco {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2; 
+}
+
+/* Columna 3 (Derecha) - Rojo */
+#slider-rojo {
+    grid-column: 3; /* <-- ¡AQUÍ ESTÁ LA CORRECCIÓN! */
+}
+#valor-rojo {
+    grid-column: 3; /* <-- ¡AQUÍ ESTÁ LA CORRECCIÓN! */
+}
+#cuadro-rojo {
+    background-color: #800000;
+    grid-column: 3; 
+}
+
+/* Estilo para la imagen del escudo */
+.escudo-img {
+    width: 80%;
+    height: auto;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+/* Estilos para la sección de integrantes */
+.integrantes {
+    margin-top: 50px; 
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333333;
+    padding-bottom: 30px; 
+}
+
+.integrantes h2 {
+    font-size: 1.5rem;
+    color: #000000;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.integrantes p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+    font-family: monospace; 
+}

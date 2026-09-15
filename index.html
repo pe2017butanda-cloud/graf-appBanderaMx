@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandera de México</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h1>Bandera de México</h1>
+
+    <div class="contenedor-bandera">
+        
+        <!-- Sección Verde -->
+        <div class="columna">
+            <p class="etiqueta">Esperanza</p>
+            <input type="range" id="slider-verde" min="0" max="255" value="128">
+            <p id="valor-verde" class="valor-hex">#008000</p>
+            <div id="cuadro-verde" class="cuadro-color"></div>
+        </div>
+
+        <!-- Sección Blanca (Centro) -->
+        <div class="columna">
+            <p class="etiqueta">Unidad</p>
+            <p class="valor-hex">#FFFFFF</p>
+            <div class="cuadro-color blanco">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Coat_of_arms_of_Mexico.svg/250px-Coat_of_arms_of_Mexico.svg.png?utm_source=es.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="Escudo Nacional de México" class="escudo-img">
+            </div>
+        </div>
+
+        <!-- Sección Roja -->
+        <div class="columna">
+            <p class="etiqueta">Sangre de nuestros héroes nacionales</p>
+            <input type="range" id="slider-rojo" min="0" max="255" value="128">
+            <p id="valor-rojo" class="valor-hex">#800000</p>
+            <div id="cuadro-rojo" class="cuadro-color"></div>
+        </div>
+
+    </div>
+
+    <!-- Sección de Integrantes -->
+    <footer class="integrantes">
+        <h2>Integrantes del equipo:</h2>
+        <p>Butanda López Pablo Ernesto - No. Control: 23200987</p>
+        <p>Silva López Mario Alberto - No. Control: 23200900</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
